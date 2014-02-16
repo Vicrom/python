@@ -1,0 +1,35 @@
+1. Identificarse como usuario:  
+	$git config --global user.name "<nombre_usuario>"
+	$git config --global user.email <correo_electronico>    (esto solo la primera vez)
+
+	para comprobar que usuario hay configurado: 
+	$git config user.name
+
+2. Desde el terminal de git, colocarte en la carpeta donde quieres que se guarde el directorio y clonar repositorio desde github
+	$git clone <url>, en nuestro caso 
+	$git clone https://github.com/Vicrom/etnom.git    (solo la primera vez)
+
+
+3. Para abrir un archivo y empezar a escribir: $<programa> <nombre_archivo.extension>   ej: notepad new.txt
+	para configurar que programa se va a abrir por defecto: $git config --globlal core.editor programa
+
+4. Cuando el archivo este listo, lo añadimos: 
+	$git add
+	y pasa a una zona que se llama stage
+
+5. Para ver el estado de los archivos en el repositorio:
+	$git status
+	Podran estar modificados, en rojo si no se han añadido, en verde si estan añadidos 
+	pero no confirmados y si todo esta confirmado (commit), tambien lo dice
+
+6. Para terminar de confirmar que esta listo
+	$git commit -m "identificacion de commit"
+	
+7.Ahora estaria confirmado a nivel local. Para subirlo a github
+	
+	$git push origin master
+
+	si dice reject!, significa que algun miembro del equipo se ha adelantado modificando el archivo, 
+	entonces tendremos que integrar sus cambios en nuestra version
+
+	$git fetch
